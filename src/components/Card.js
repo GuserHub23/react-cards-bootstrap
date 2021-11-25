@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './cards.css'
 
-function Card({title,imageSource,text,url}) {
+function Card({title,imageSource,text,url,button}) {
     return (
         <div className="card text-center bg-dark bg-gradient
         animate__animated animate__backInRight">
@@ -17,7 +17,9 @@ function Card({title,imageSource,text,url}) {
                     }
                 </p>
                 <a href={url} className="btn btn-outline-secondary rounded-0" target="_blank">
-                    Go to this website
+                    {
+                        button ? button: 'Go to this Website'
+                    }
                 </a>
             </div>
         </div>

@@ -8,22 +8,25 @@ import image3 from '../assets/image3.jpg'
 const cards = [
     {
         id:1,
-        title:'GuserHub Web',
+        title:'GuserHub IG',
         image: image1,
         url: 'https://www.instagram.com',
-        // text: 'This is my website'
+        // text: 'This is my website',
+        button: 'Go to my Instagram'
     },
     {
         id:2,
-        title:'GuserHub Blog',
+        title:'GuserHub GitHub',
         image: image2,
-        url: 'https://github.com/GuserHub23'
+        url: 'https://github.com/GuserHub23',
+        button: 'Go to my GitHub' 
     },
     {
         id:3,
         title:'GuserHub YT',
         image: image3,
-        url: 'https://www.youtube.com/channel/UCgv4NbwCqeO6dFG-lvOYAtg'
+        url: 'https://www.youtube.com',
+        button: 'Go to my YT Channel'
     }
 ] 
 
@@ -34,7 +37,7 @@ function Cards() {
                 {
                     cards.map(card => (
                         <div className="col-md-4" key={card.id}>
-                            <Card title={card.title} imageSource={card.image} url={card.url} text={card.text}/>
+                            <Card title={card.title} imageSource={card.image} url={card.url} text={card.text} button={card.button}/>
                         </div>
                     ))
                 }
